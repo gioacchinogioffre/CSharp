@@ -26,11 +26,14 @@ namespace CSharp
 
 			Box box = new();
 			box.SetLength(3);
-			box.height = 4;
+			box.Height = 4;
 			box.width = 5;
+			box.Width = 5;
 
-			box.DisplayInfo();
+            box.DisplayInfo();
 			Console.WriteLine(box.GetLength());
+			Console.WriteLine(box.Height);
+			Console.WriteLine(box.Width);
 
         }
 	}

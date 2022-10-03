@@ -5,7 +5,7 @@ namespace CSharp
     {
         // member variable
         private int length = 3;
-        public int height;
+        private int height;
         public int width;
         public int volume;
 
@@ -19,11 +19,31 @@ namespace CSharp
         {
             this.length = length;
         }
+        private void SetHeight(int height) // only accesible from the class itslef or child classes (inheritance)
+        {
+            this.height = height;
+        }
         // getter
         public int GetLength()
         {
             return this.length;
         }
+
+        // properties (they start with a Capital letter)
+        public int Height
+        {
+            get
+            {
+                return height;
+            }
+            set
+            {
+                height = value;
+            }
+        }
+
+        // prop command
+        public int Width { get; set; }
     }
 }
 
