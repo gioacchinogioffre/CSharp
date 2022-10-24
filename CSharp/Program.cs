@@ -140,9 +140,51 @@ namespace CSharp
 				//inner for loop
 				for (int j = 0; j < array2D.GetLength(1); j++)
 				{
-				System.Console.Write(array2D[i, j] + " ");
+				System.Console.Write(array2D[i, j] + "\n");
 				}
 			}
+
+
+			// declare jagged array (array within an array)
+			int[][] jaggedArray = new int[3][]; // array with 3 arrays inside
+			jaggedArray[0] = new int[5]; // index 0 an array with 5 elements
+			jaggedArray[1] = new int[3]; // index 1 an array with 3 elements
+			jaggedArray[2] = new int[2]; // index 2 an array with 2 elements
+
+			jaggedArray[0] = new int[] {2,3,4,5,6}; // initialize and add values to the array
+			jaggedArray[1] = new int[] {1,2,3};
+			jaggedArray[2] = new int[] {10,22};
+
+			// alternative way
+			int[][] jaggedArray2 = new int[][]
+			{
+				new int[] {2,3,4,5,6},
+				new int[] {1,2,3},
+			};
+
+			System.Console.WriteLine("The last value of the first entry within the jagged array is " +jaggedArray2[0][4]);
+
+			foreach(int[] array in jaggedArray2)
+			{
+				// for (int i = 0; i < array.Length; i++)
+				// {
+				// 	System.Console.Write(array[i]);
+				// }
+				foreach (int num in array)
+				{
+					System.Console.Write(num);
+				}
+			}
+					System.Console.Write("\n");
+
+
+			// for (int i = 0; i < jaggedArray2.Length; i++)
+			// {
+			// 	for (int j = 0; j < jaggedArray2[i].Length; j++)
+			// 	{
+			// 		System.Console.WriteLine(jaggedArray2[i][j]);
+			// 	}
+			// }
 
 
         }
