@@ -129,6 +129,21 @@ namespace CSharp
 			int dimensions = array2Dstring.Rank;
 			System.Console.WriteLine("the array has " + dimensions + " dimensions");
 
+			foreach (int num in array2D) // we cannot change the items of the array, only access to them
+			{
+				System.Console.Write(num + " ");
+			}
+
+			System.Console.WriteLine("\n This is our 2D array printed using nested for loop");
+			for (int i = 0; i < array2D.GetLength(0); i++)
+			{
+				//inner for loop
+				for (int j = 0; j < array2D.GetLength(1); j++)
+				{
+				System.Console.Write(array2D[i, j] + " ");
+				}
+			}
+
 
         }
 
