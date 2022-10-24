@@ -13,13 +13,13 @@ namespace CSharp
 		private int age;
 		private string eyeColor;
 
-		// default constructor
+		// default constructor (without parameters)
 		public Human()
 		{
 			Console.WriteLine("Constructor called. Object created");
 		 }
 
-        // parameterized constructor
+        // parameterized constructor (we can create multiple constructors, with one or more parameters)
 
         public Human(string firstName, string lastName)
         {

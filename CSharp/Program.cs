@@ -24,16 +24,14 @@ namespace CSharp
 			Human basic = new();
 			basic.IntroduceMyself();
 
-			Box box = new();
-			box.SetLength(3);
-			box.Height = 4;
-			box.width = 5;
-			box.Width = 5;
+			Box box = new(3, 4, 5);
 
             box.DisplayInfo();
-			Console.WriteLine(box.GetLength());
-			Console.WriteLine(box.Height);
-			Console.WriteLine(box.Width);
+			Console.WriteLine("Box length is "+ box.GetLength());
+			Console.WriteLine("Box height is " + box.Height);
+			Console.WriteLine("Box width is " + box.Width);
+			box.Width = 10;
+			Console.WriteLine("Box width is " + box.Width);
 
         }
 	}
