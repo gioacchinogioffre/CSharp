@@ -85,6 +85,51 @@ namespace CSharp
 			}
 
 
+			// declare 2D array
+			int[,] array2D = new int[,]
+			 {
+				{1,2,3}, //row 0
+				{4,5,6}, // row 1
+				{7,8,9} // row 2
+			 };
+
+			System.Console.WriteLine("Central value is {0}", array2D[1,1]); // it prints 5
+			System.Console.WriteLine("Central value is {0}", array2D[2,0]); // it prints 7
+
+			// declare 3D ARRAY
+			string[,,] array3D = new string[,,]
+			{
+				{
+					{"000", "001"},
+					{"010", "011"},
+					{"Hi there", "What's up"}
+				},
+				{
+					{"100", "101"},
+					{"110", "111"},
+					{"Anothe oner", "Last entry"}
+				}
+			};
+
+			System.Console.WriteLine("The value is {0}", array3D[0,2,0]); // it prints Hi there
+			System.Console.WriteLine("Last entry is {0}", array3D[1,2,1]); // it prints Last entry
+
+			string[,] array2Dstring = new string[3,2] // specify 3 rows and two entries per each 
+			{
+				{"one", "two"},
+				{"three", "four"},
+				{"five", "six"},
+			};
+
+			System.Console.WriteLine("Print the third {0}", array2Dstring[1,0]); // it prints three
+			array2Dstring[1,1] = "chicken";
+			System.Console.WriteLine(array2Dstring[1,1]);
+
+			// getting the dimensions of an array
+			int dimensions = array2Dstring.Rank;
+			System.Console.WriteLine("the array has " + dimensions + " dimensions");
+
+
         }
 
 
