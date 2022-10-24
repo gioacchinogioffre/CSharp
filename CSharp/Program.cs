@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 namespace CSharp
 
 {
@@ -175,7 +176,7 @@ namespace CSharp
 					System.Console.Write(num);
 				}
 			}
-					System.Console.Write("\n");
+			System.Console.Write("\n");
 
 
 			// for (int i = 0; i < jaggedArray2.Length; i++)
@@ -185,6 +186,45 @@ namespace CSharp
 			// 		System.Console.WriteLine(jaggedArray2[i][j]);
 			// 	}
 			// }
+
+			// ARRAY LIST
+			ArrayList myArrayList = new ArrayList(); // undefined amount of objects
+			ArrayList myArrayList2 = new ArrayList(100); // defined amount of objects
+
+			myArrayList.Add(25); 
+			myArrayList.Add("Hello"); 
+			myArrayList.Add(13); 
+			myArrayList.Add(128); 
+			myArrayList.Add(25.3); 
+
+			// delete element with specific value from the array
+			myArrayList.Remove(13);
+
+			// delete element at specific position
+			myArrayList.RemoveAt(0);
+
+			System.Console.WriteLine(myArrayList.Count); // should be print 3
+
+			double sum = 0;
+
+			foreach (object obj in myArrayList)
+			{
+				if(obj is int)
+				{
+					sum += Convert.ToDouble(obj);
+				}
+				else if (obj is double)
+				{
+					sum += (double)obj;
+				}
+				else if (obj is string)
+				{
+					System.Console.WriteLine(obj);
+				}
+			}
+
+			System.Console.WriteLine(sum); // should be print 153.3
+		
 
 
         }
