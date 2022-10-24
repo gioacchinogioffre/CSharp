@@ -24,6 +24,8 @@ namespace CSharp
 			Human basic = new();
 			basic.IntroduceMyself();
 
+			// BOX CLASS
+			Console.WriteLine("BOX CLASS TEST");
 			Box box = new(3, 4, 5);
 
             box.DisplayInfo();
@@ -33,7 +35,14 @@ namespace CSharp
 			box.Width = 10;
 			Console.WriteLine("Box width is " + box.Width);
 
+			// MEMBER CLASS
+			Console.WriteLine(value: "MEMBER CLASS TEST");
+			Members member1 = new Members();
+			member1.Introducing(true);
+
         }
+
+
 	}
 }
 
